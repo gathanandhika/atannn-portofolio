@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div 
     data-scroll-section
-    className="container bg-zinc-900 min-h-screen">
+    className="bg-zinc-900 min-h-screen">
         <ContactHero/>
         <ContactContent/>
     </div>
