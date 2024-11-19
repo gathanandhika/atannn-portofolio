@@ -1,5 +1,4 @@
 import ContactContent from "./ContactFooter/ContactContent"
-import ContactHero from "./ContactFooter/ContactHero"
 
 const Footer = () => {
   return (
