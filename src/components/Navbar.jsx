@@ -1,4 +1,3 @@
-
 import { PiCopyrightLight } from "react-icons/pi";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -24,50 +23,80 @@ const Navbar = () => {
       }`}
     >
       {/* Sidebar dan copyright */}
-      
-      <motion.div 
-       whileHover={{ scale: 1, x: 10 }}
-       whileTap={{ scale: 0.9 }}
-       className="flex items-center justify-center text-lg gap-2">
+      <motion.div
+        whileHover={{ scale: 1, x: 10 }}
+        whileTap={{ scale: 0.9 }}
+        className="flex items-center justify-center text-lg gap-2"
+      >
         <div>
-        <PiCopyrightLight />
+          <PiCopyrightLight />
         </div>
         <div>
-        <CustomLink to="/">
-          Made with Love &mdash; Atannn.
-        </CustomLink>
+          <CustomLink to="/">
+            Made with Love &mdash; Atannn.
+          </CustomLink>
         </div>
       </motion.div>
 
       {/* Navbar icons */}
-      <div className="m-8 flex items-center justify-center lg:gap-4 gap-4 text-2xl z-20">
+      <div
+        className={`m-8 flex items-center justify-center lg:gap-4 gap-4 text-2xl z-20 ${
+          isContactPage ? "contact-page" : ""
+        }`}
+      >
         <motion.div
-          whileHover={{ scale: 1.1, y: 2.5 }}  // Animasi saat hover
-          whileTap={{ scale: 0.9 }}  // Animasi saat tap
-          className={`text-lg ${isActive("/about") ? "border-b border-black" : ""}`}  // Aktifkan animasi saat halaman aktif
+          whileHover={{ scale: 1.1, y: 2.5 }} // Animasi saat hover
+          whileTap={{ scale: 0.9 }} // Animasi saat tap
+          className={`text-lg ${
+            isActive("/about") ? "border-b border-black" : ""
+          }`} // Aktifkan animasi saat halaman aktif
         >
-          <CustomLink to="/about" className="custom-link">About</CustomLink>
+          <CustomLink to="/about" className="custom-link">
+            About
+          </CustomLink>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1, y: 2.5 }}
           whileTap={{ scale: 0.9 }}
-          className={`text-lg ${isActive(["/work", "/work-dev", "/work-design"]) ? "border-b border-black" : ""}`}
+          className={`text-lg ${
+            isActive(["/work", "/work-dev", "/work-design"])
+              ? "border-b border-black"
+              : ""
+          }`}
         >
-          <CustomLink to="/work" className="custom-link">Work</CustomLink>
+          <CustomLink to="/work" className="custom-link">
+            Work
+          </CustomLink>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1, y: 2.5 }}
           whileTap={{ scale: 0.9 }}
-          className={`text-lg ${isActive(["/career", "/career-work", "/career-intern", "/career-organization", "/career-sc"]) ? "border-b border-black" : ""}`}
+          className={`text-lg ${
+            isActive([
+              "/career",
+              "/career-work",
+              "/career-intern",
+              "/career-organization",
+              "/career-sc",
+            ])
+              ? "border-b border-black"
+              : ""
+          }`}
         >
-          <CustomLink to="/career" className="custom-link">Career</CustomLink>
+          <CustomLink to="/career" className="custom-link">
+            Career
+          </CustomLink>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1, y: 2.5 }}
           whileTap={{ scale: 0.9 }}
-          className={`text-lg ${isActive("/contact") ? "border-b border-white" : ""}`}
+          className={`text-lg ${
+            isActive("/contact") ? "border-b border-white" : ""
+          }`}
         >
-          <CustomLink to="/contact" className="custom-link">Contact</CustomLink>
+          <CustomLink to="/contact" className="custom-link">
+            Contact
+          </CustomLink>
         </motion.div>
       </div>
     </nav>

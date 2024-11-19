@@ -1,4 +1,6 @@
 // App.jsx
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import ProjectDetail from './pages/Detail/ProjectDetail';
 import WorkList from './pages/Work';
@@ -6,11 +8,6 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Career from './pages/Career';
 import CareerDetail from './pages/Detail/CareerDetail';
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate  } from 'react-router-dom';
-import { ParallaxProvider } from 'react-scroll-parallax';
-import LocomotiveScrollProvider from './components/LocomotiveScrollProvider';
-import WorkHeroDev from './components/WorkPageDev/WorkHeroDev';
 import WorkDev from './pages/WorkDev';
 import WorkDesign from './pages/WorkDesign';
 import CareerWork from './pages/CareerWork';
@@ -20,6 +17,8 @@ import CareerSC from './pages/CareerSC';
 import { useLocomotive } from './hooks/useLocomotive';
 import PreLoader from './components/PreLoader/PreLoader';
 import PageTransition from './components/PageTransition/PageTransition';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import LocomotiveScrollProvider from './components/LocomotiveScrollProvider';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -35,6 +34,60 @@ const ScrollToTop = () => {
     }
   }, [location, locomotiveRef]);
 
+  return null;
+};
+
+// Component untuk mengatur title halaman berdasarkan rute
+const TitleUpdater = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Ganti title sesuai dengan rute yang sedang aktif
+    switch (location.pathname) {
+      case '/':
+        document.title = "Gathan Andhika";
+        break;
+      case '/projects/:title':
+        document.title = 'Work - Atannn';
+        break;
+      case '/work':
+        document.title = 'Work - Atannn';
+        break;
+      case '/work-dev':
+        document.title = 'Work - Atannn';
+        break;
+      case '/work-design':
+        document.title = 'Work - Atannn';
+        break;
+      case '/about':
+        document.title = 'About - Atannn';
+        break;
+      case '/contact':
+        document.title = 'Contact - Atannn';
+        break;
+      case '/career':
+        document.title = 'Career - Atannn';
+        break;
+      case '/career-work':
+        document.title = 'Career - Atannn';
+        break;
+      case '/career-intern':
+        document.title = 'Career - Atannn';
+        break;
+      case '/career-organization':
+        document.title = 'Career - Atannn';
+        break;
+      case '/career-sc':
+        document.title = 'Career - Atannn';
+        break;
+      case '/experience/:company':
+        document.title = 'Career - Atannn';
+        break;
+      default:
+        document.title = 'Gathan Andhika'; // Default title
+    }
+  }, [location]); // Jalankan efek setiap kali lokasi berubah
+  
   return null;
 };
 
@@ -72,6 +125,8 @@ const App = () => {
       <PreLoader />
       <ParallaxProvider>
         <Router>
+          {/* Update title setiap kali rute berubah */}
+          <TitleUpdater />
           <AppContent />
         </Router>
       </ParallaxProvider>
