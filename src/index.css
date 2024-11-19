@@ -136,4 +136,8 @@ html.has-scroll-dragging {
 
 
 
+[data-scroll-container] {
+  min-height: 100vh;
+  overflow: hidden; /* Hapus scrollbar default */
+}
 

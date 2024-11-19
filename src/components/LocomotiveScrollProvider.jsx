@@ -1,29 +1,37 @@
-// src/components/providers/LocomotiveScrollProvider.jsx
-import React, { useEffect } from 'react';
-import { useLocomotive } from '../hooks/useLocomotive';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
+import LocomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 const LocomotiveScrollProvider = ({ children }) => {
-    const locomotiveRef = useLocomotive();
-    const location = useLocation();
-  
-    useEffect(() => {
-      if (locomotiveRef) {
-        // Reset scroll position saat route berubah
-        locomotiveRef.scrollTo(0, { duration: 0, disableLerp: true });
-        
-        // Update locomotive scroll setelah content dimuat
-        setTimeout(() => {
-          locomotiveRef.update();
-        }, 500);
+  const scrollRef = useRef(null);
+  const locomotiveInstance = useRef(null);
+
+  useEffect(() => {
+    // Inisialisasi Locomotive Scroll
+    if (!locomotiveInstance.current) {
+      locomotiveInstance.current = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        multiplier: 1,
+        smartphone: { smooth: true },
+        tablet: { smooth: true },
+      });
+    }
+
+    // Cleanup
+    return () => {
+      if (locomotiveInstance.current) {
+        locomotiveInstance.current.destroy();
+        locomotiveInstance.current = null;
       }
-    }, [location.pathname, locomotiveRef]);
-  
-    return (
-      <main data-scroll-container ref={locomotiveRef}>
-        {children}
-      </main>
-    );
-  };
+    };
+  }, []);
+
+  return (
+    <div data-scroll-container ref={scrollRef}>
+      {children}
+    </div>
+  );
+};
 
 export default LocomotiveScrollProvider;

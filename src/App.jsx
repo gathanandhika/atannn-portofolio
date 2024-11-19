@@ -79,11 +79,9 @@ const TitleUpdater = () => {
 
 const AppContent = () => {
   return (
-    <LocomotiveScrollProvider>
       <div data-scroll-container className='overflow-x-hidden text-zinc-900 antialiased selection:bg-indigo-600 selection:text-white'>
         <PageTransition />
         <div className="container mx-auto">
-          <ScrollToTop/>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/projects/:title' element={<ProjectDetail />} />
@@ -101,7 +99,6 @@ const AppContent = () => {
           </Routes>
         </div>
       </div>
-    </LocomotiveScrollProvider>
   );
 };
 
@@ -109,6 +106,7 @@ const App = () => {
   return (
     <>
       <PreLoader />
+      <LocomotiveScrollProvider>
       <ParallaxProvider>
         <Router>
           {/* Update title setiap kali rute berubah */}
@@ -116,6 +114,8 @@ const App = () => {
           <AppContent />
         </Router>
       </ParallaxProvider>
+      </LocomotiveScrollProvider>
+
     </>
   );
 };
