@@ -1,5 +1,5 @@
 import React from 'react';
-import './PageTransition.css';
+import './pagetransition.css';
 
 const PageTransition = () => {
 
