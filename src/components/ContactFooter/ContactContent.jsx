@@ -4,6 +4,7 @@ import imageLogo from "../../assets/nnathLogo.png";
 import { PiCopyrightBold } from "react-icons/pi"; // Pastikan import PiCopyrightBold jika belum ada
 import ButtonFooter from "../ButtonFooter/ButtonFooter";
 import CustomLink from "../CustomLink";
+import ContactHero from "./ContactHero";
 
 
 const ContactContent = () => {
@@ -18,7 +19,9 @@ const ContactContent = () => {
   const timeString = `${hours}:${minutes} ${ampm}`; // Format waktu menjadi "hh:mm AM/PM"
 
   return (
-    <div className="pb-4 lg:mb-35 relative"> {/* Tambahkan relative di sini untuk memberi konteks posisi absolute pada footer */}
+    <div className="pb-4 lg:mb-35 relative">
+    <ContactHero/>
+    {/* Tambahkan relative di sini untuk memberi konteks posisi absolute pada footer */}
       <div className="flex flex-wrap justify-between items-center lg:mb-36">
         {/* Kolom untuk Teks */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start px-6 lg:pl-32 py-12 lg:py-16">
