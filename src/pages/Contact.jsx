@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div className="bg-zinc-900">
       <Navbar/>
-      <div className="mt-[-50px] px-28">
+      <div className="mt-[-50px] px-8 lg:px-28">
       <ContactMe/>
       </div>
     </div>
