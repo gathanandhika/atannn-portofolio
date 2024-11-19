@@ -1,0 +1,30 @@
+/* components/PageTransition/PageTransition.css */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #09090b;
+    z-index: 50;
+    transform: scaleY(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .transition-text {
+    color: rgb(73, 73, 73);
+    font-size: 2rem;
+    font-weight: 300;
+    opacity: 0;
+    transform: translateY(20px);
+    position: absolute;
+  }
+  
+  
+  @keyframes lineAnim {
+    to {
+      transform: scaleX(1);
+    }
+  }

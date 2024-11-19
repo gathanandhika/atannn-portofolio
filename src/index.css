@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: "DM Sans", sans-serif;
+    scroll-behavior: smooth;    
+    overflow: hidden;
+}
+body::-webkit-scrollbar {
+  display: none; /* Menyembunyikan scrollbar */
+}
+
+.project-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Membesar sedikit */
+  }
+
+  
+  .project-card:hover p{
+    opacity: 0.7;
+  }
+  
+  
+
+  .project-card0 {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .project-card0:hover {
+    transform: scale(1.05); /* Membesar sedikit */
+
+  }
+
+  .project-card0:hover p{
+    opacity: 0.75;
+  }
+  
+/* Menambahkan garis bawah saat hover */
+.link-footer a {
+  position: relative; /* Memastikan posisi relatif untuk elemen a */
+  text-decoration: none; /* Menghilangkan underline default */
+}
+
+/* Efek hover untuk link, menambahkan garis bawah */
+.link-footer a::after {
+  content: ""; /* Membuat elemen kosong */
+  position: absolute;
+  bottom: -5px; /* Menempatkan garis sedikit di bawah teks */
+  left: 0;
+  width: 0%; /* Awalnya lebar garis bawah adalah 0% */
+  height: 1px; /* Tinggi garis bawah */
+  background-color: #ffffff; /* Warna garis bawah */
+  transition: width 0.3s ease; /* Durasi transisi untuk lebar garis bawah */
+}
+
+/* Efek hover untuk memperlebar garis bawah */
+.link-footer a:hover::after {
+  width: 100%; /* Lebar garis bawah akan penuh saat hover */
+}
+
+.footer-parallax {
+  transform: translateY(100px); /* Mulai dengan posisi footer di bawah */
+  transition: transform 0.5s ease-out; /* Berikan efek transisi */
+}
+
+.parallax-element {
+  will-change: transform; /* Memberikan indikasi bahwa elemen ini sering berubah */
+  transform: translateY(0);
+  transition: transform 0.2s ease-out; /* Transisi yang halus */
+}
+
+[data-scroll-section] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-scroll] {
+  will-change: transform;
+}
+
+/* src/styles/locomotive-scroll.css */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+/* style.css atau file yang terkait */
+.custom-link {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;  /* Jarak garis bawah dengan teks */
+  left: 0;
+  width: 0;
+  height: 1px;  /* Ketebalan garis bawah */
+  background-color: black;
+  transition: width 0.3s ease-out;  /* Animasi lebar garis bawah */
+}
+
+/* Garis bawah muncul saat hover */
+.custom-link:hover::after {
+  width: 100%;  /* Garis bawah akan meluas sampai 100% */
+}

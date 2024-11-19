@@ -1,0 +1,114 @@
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: white;
+    position: fixed; /* Sidebar tetap di atas halaman */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 50; /* Pastikan sidebar di atas halaman */
+    height: 100%; /* Sidebar mengisi layar penuh */
+}
+
+/* Styling untuk .bg */
+.bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 500px;
+    background: #18181b;
+    z-index: 50; /* Agar .bg selalu di atas konten */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efek hover pada background */
+.bg.hover-bg:hover {
+    background-color: rgb(60, 60, 60); /* Ganti dengan warna hover yang diinginkan */
+}
+
+/* Styling untuk overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparan hitam untuk overlay */
+    z-index: 1; /* Agar overlay berada di bawah sidebar tapi di atas konten halaman */
+    pointer-events: auto; /* Menerima klik */
+}
+
+/* Links styling */
+.links {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 50px;
+    margin-left: 90px;
+
+    a {
+        font-size: 50px;
+    }
+}
+
+.links2 {
+    gap: 30px;
+    margin-top: -40px;
+}
+
+.links2 a {
+    font-size: 15px;
+    position: relative; /* Menambahkan posisi relatif pada anchor */
+    text-decoration: none; /* Menghilangkan underline default */
+}
+
+.links2 a::after {
+    content: ""; /* Membuat elemen kosong */
+    position: absolute;
+    bottom: -5px; /* Posisi di bawah teks */
+    left: 0;
+    width: 0%; /* Awalnya, lebar garis bawah adalah 0% */
+    height: 1px; /* Tinggi garis bawah */
+    background-color: white; /* Warna garis bawah */
+    transition: width 0.5s ease; /* Durasi transisi untuk lebar garis bawah */
+}
+
+.links2 a:hover::after {
+    width: 100%; /* Saat hover, lebar garis bawah menjadi 100% */
+}
+
+/* Button toggle */
+button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: fixed;
+    top: 25px;
+    right: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10001; /* Pastikan tombol berada di atas overlay */
+}
+
+button:hover {
+    background-color: #4a47ff;
+}
+
+button svg {
+    width: 20px;
+    height: 20px;
+}
