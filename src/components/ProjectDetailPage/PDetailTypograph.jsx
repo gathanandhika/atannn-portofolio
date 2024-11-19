@@ -58,7 +58,7 @@ const PDetailTypograph = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         href={project.link}
-                        className="w-96 "
+                        className="lg:w-96 ml-[-10px] lg:ml-0"
                     >
                         <ButtonFooter>More Details</ButtonFooter>
                     </a>
