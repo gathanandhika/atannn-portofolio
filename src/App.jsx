@@ -19,23 +19,9 @@ import PreLoader from './components/PreLoader/PreLoader';
 import PageTransition from './components/PageTransition/PageTransition';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import LocomotiveScrollProvider from './components/LocomotiveScrollProvider';
+import ScrollToTop from './components/ScrollToTop';
 
-const ScrollToTop = () => {
-  const location = useLocation();
-  const locomotiveRef = useLocomotive();
-  
-  useEffect(() => {
-    // Reset scroll untuk window normal
-    window.scrollTo(0, 0);
-    
-    // Reset scroll untuk Locomotive Scroll
-    if (locomotiveRef) {
-      locomotiveRef.scrollTo(0, { duration: 0, disableLerp: true });
-    }
-  }, [location, locomotiveRef]);
 
-  return null;
-};
 
 // Component untuk mengatur title halaman berdasarkan rute
 const TitleUpdater = () => {
@@ -94,10 +80,10 @@ const TitleUpdater = () => {
 const AppContent = () => {
   return (
     <LocomotiveScrollProvider>
-      <div className='overflow-x-hidden text-zinc-900 antialiased selection:bg-indigo-600 selection:text-white'>
+      <div data-scroll-container className='overflow-x-hidden text-zinc-900 antialiased selection:bg-indigo-600 selection:text-white'>
         <PageTransition />
         <div className="container mx-auto">
-          <ScrollToTop />
+          <ScrollToTop/>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/projects/:title' element={<ProjectDetail />} />

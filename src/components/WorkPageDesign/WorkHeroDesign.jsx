@@ -9,7 +9,7 @@ const WorkHeroDesign = () => {
     <div data-scroll-section className="pb-4 lg:mb-35 mt-[-50px]">
       <div className="flex flex-wrap justify-center items-center">
         <div className="w-full">
-          <div className="flex flex-col items-center">
+          <div  className="flex flex-col items-center">
             <motion.p
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}

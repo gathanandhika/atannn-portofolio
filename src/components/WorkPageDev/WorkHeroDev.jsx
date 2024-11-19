@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 const WorkHeroDev = () => {
    return (
     <div data-scroll-section className="pb-4 lg:mb-35 mt-[-50px]">
-      <div className="flex flex-wrap justify-center items-center">
-        <div className="w-full">
+      <div data-scroll className="flex flex-wrap justify-center items-center">
+        <div data-scroll className="w-full">
           <div className="flex flex-col items-center">
             <motion.p
               whileInView={{ opacity: 1, y: 0 }}
@@ -21,9 +21,9 @@ const WorkHeroDev = () => {
           </div>
 
           {/* Tombol kategori */}
-          <div className="lg:flex relative items-center lg:px-48 px-42 gap-4 border-b border-zinc-300 pb-12 mb-16">
+          <div data-scroll className="lg:flex relative items-center lg:px-48 px-42 gap-4 border-b border-zinc-300 pb-12 mb-16">
 
-              <div className="mb-2 lg:mb-0 px-8 lg:px-0">
+              <div data-scroll className="mb-2 lg:mb-0 px-8 lg:px-0">
                 <Link to='/work'>
                 <Button
                 >
@@ -31,7 +31,7 @@ const WorkHeroDev = () => {
                 </Button>
                 </Link>
               </div>
-              <div className="mb-2 lg:mb-0 px-8 lg:px-0">
+              <div data-scroll className="mb-2 lg:mb-0 px-8 lg:px-0">
                 <Link to='/work-dev'>
                 <Button
                 isActive="#455ce9"
@@ -40,7 +40,7 @@ const WorkHeroDev = () => {
                 </Button>
                 </Link>
               </div>
-              <div className="mb-2 lg:mb-0 px-8 lg:px-0">
+              <div data-scroll className="mb-2 lg:mb-0 px-8 lg:px-0">
                 <Link to='/work-design'>
                 <Button
                 >

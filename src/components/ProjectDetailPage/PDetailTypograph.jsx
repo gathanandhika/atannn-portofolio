@@ -25,17 +25,14 @@ const PDetailTypograph = () => {
   
   return (
 <div data-scroll-section className="pb-2 lg:mb-35 bg-zinc-800">
-        <div className="flex flex-wrap justify-center items-center">
-            <div className="w-full">
-                <div className="flex flex-col items-center">
+        <div data-scroll className="flex flex-wrap justify-center items-center">
+            <div data-scroll className="w-full">
+                <div data-scroll className="flex flex-col items-center">
                     <div 
-                            data-scroll
-                            data-scroll-speed={1}
+                      data-scroll
+                      data-scroll-speed={1}
                     className="lg:mt-32 my-12 lg:text-7xl text-4xl text-zinc-950 px-4"> 
-                    <motion.img
-                        initial={{ opacity: 1, y: -100 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.5, type: "spring", stiffness: 120}}
+                    <img
                         className="lg:max-w-[1200px] h-auto "
                         src={project.typograph}
                         alt="Mockup"
@@ -44,16 +41,13 @@ const PDetailTypograph = () => {
                 </div>
             </div>
         </div>
-        <div className="flex flex-grid gap- justify-center items-center mb-16">
-                <div className="lg:w-42 w-52 pb-24 pt-8 flex justify-center items-center mr-[-50px]">
-                  
+        <div data-scroll className="flex flex-grid gap- justify-center items-center mb-16">
+                <div data-scroll className="lg:w-42 w-52 pb-24 pt-8 flex justify-center items-center lg:mr-[-40px] mr-[-60px] ml-[-45px]">
                     <ButtonFooter onClick={handleGoBack}>
-                      <div className="text-2xl">
-                      <FiArrowLeft></FiArrowLeft>
-                      </div>
+                      <FiArrowLeft className="text-2xl"></FiArrowLeft>
                     </ButtonFooter>
                 </div>
-                <div className="lg:w-42 w-52 pb-24 pt-8 flex justify-center items-center">
+                <div data-scroll className="lg:w-42 w-52 pb-24 pt-8 flex justify-center items-center">
                     <a
                         target="_blank"
                         rel="noopener noreferrer"

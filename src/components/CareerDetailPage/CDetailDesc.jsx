@@ -56,9 +56,7 @@ const CDetailDesc = () => {
             <div className="flex justify-center items-center gap-2">
             <div className="lg:w-56 w-52 py-16 flex justify-center items-center mr-[-50px]">
                     <Button onClick={handleGoBack}>
-                      <div className="text-2xl">
                       <FiArrowLeft></FiArrowLeft>
-                      </div>
                     </Button>
                 </div>
                 <div className="lg:w-56 w-52 py-16 flex justify-center items-center">

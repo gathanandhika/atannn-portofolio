@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 const ContactHero = () => {
   return (
-    <div className="pb-4 lg:p-2">
+    <div data-scroll-section className="pb-4 lg:p-2">
         <div className="flex flex-wrap justify-center items-center">
             <div className="w-full lg:px-28">
                 <div className="flex flex-col items-center border-b border-zinc-600 ">

@@ -106,16 +106,18 @@ html.has-scroll-dragging {
 
 /* style.css atau file yang terkait */
 /* Kelas tambahan untuk navbar jika berada di halaman contact */
-.contact-page .custom-link::after {
-  background-color: white; /* Ganti warna garis bawah menjadi putih */
-}
-
 /* Custom link styling */
 .custom-link {
   position: relative;
   display: inline-block;
+  transition: transform 0.3s ease-out; /* Smooth transition untuk scale */
 }
 
+.contact-page .custom-link::after {
+  background-color: white; /* Ganti warna garis bawah menjadi putih */
+}
+
+/* Garis bawah default (tanpa hover) */
 .custom-link::after {
   content: '';
   position: absolute;
@@ -124,10 +126,14 @@ html.has-scroll-dragging {
   width: 0;
   height: 1px; /* Ketebalan garis bawah */
   background-color: black; /* Default warna garis bawah */
-  transition: width 0.3s ease-out; /* Animasi lebar garis bawah */
+  transition: width 0.3s ease-out; /* Smooth transition untuk lebar garis bawah */
 }
 
 /* Garis bawah muncul saat hover */
 .custom-link:hover::after {
-  width: 100%; /* Garis bawah akan meluas sampai 100% */
+  width: 100%; /* Garis bawah meluas sampai 100% */
 }
+
+
+
+

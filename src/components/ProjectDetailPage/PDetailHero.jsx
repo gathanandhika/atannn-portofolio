@@ -21,9 +21,9 @@ const PDetailHero = () => {
   <div className="flex flex-wrap justify-center items-center relative">
     <div className="w-full">
       <div className="flex flex-col items-start">
-        <p className="lg:my-20 my-12 lg:text-7xl text-4xl text-zinc-950 lg:px-24 px-8">
+        <h1 className="lg:my-20 my-12 lg:text-7xl text-4xl text-zinc-950 lg:px-24 px-8">
           {project.title}
-        </p>
+        </h1>
       </div>
       {/* PDetailDesc berada di atas dengan z-index lebih tinggi */}
       <div

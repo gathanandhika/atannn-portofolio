@@ -7,9 +7,7 @@ const Work = () => {
   useResetScroll();
   return (
     <div>
-
       <Navbar/>
-
       <div className='lg:px-28 lg:pb-32'>
       <WorkHero/>
       </div>

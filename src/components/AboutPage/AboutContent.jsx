@@ -15,22 +15,15 @@ const AboutContent = () => {
         <div data-scroll data-scroll-speed={-2} className="z-40 bg-white">
           <div className="lg:flex items-start mb-6 text-zinc-950">
             {/* Icon dengan animasi */}
-            <motion.div
-            whileInView={{ opacity:1, scale: 1 }}
-            initial={{ opacity:0, scale:0.5 }}
-            transition={{ duration: 0.5, type:"spring", stiffness:120}}
+            <div
             >
               <FiArrowDownRight className="text-4xl lg:text-5xl mr-20" style={{ strokeWidth: 0.8 }} />
-            </motion.div>
+            </div>
             {/* Teks Deskripsi */}
-            <motion.p
-              className="text-base lg:text-base max-w-lg"
-              whileInView={{ opacity:1, x: 0 }}
-              initial={{ opacity:0, x:-100 }}
-              transition={{ duration: 0.5, type:"spring", stiffness:120, delay:0.5}}
+            <p
             >
               {ABOUT_DESC}
-            </motion.p>
+            </p>
           </div>
           </div>
         </div>
@@ -38,10 +31,7 @@ const AboutContent = () => {
         {/* Kolom untuk Gambar */}
         <div className="w-full lg:w-2/3 flex justify-center p-6 lg:p-12">
         <div data-scroll data-scroll-speed={-5}>
-          <motion.img
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, type: "spring", stiffness: 120, delay: 0.5 }}
+          <img
             className="max-w-full h-auto lg:mt-2"
             src={aboutImage}
             alt="About Image"

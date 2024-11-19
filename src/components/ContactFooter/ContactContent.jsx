@@ -23,13 +23,6 @@ const ContactContent = () => {
         {/* Kolom untuk Teks */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start px-6 lg:pl-32 py-12 lg:py-16">
           <div className="flex items-start mb-6 text-white">
-            {/* Icon dengan animasi */}
-            <motion.div
-              whileInView={{ opacity: 1, scale: 1 }}
-              initial={{ opacity: 0, scale: 0.5 }}
-              transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
-            >
-            </motion.div>
             {/* Teks Deskripsi */}
             <motion.p
               className="text-base lg:text-3xl max-w-lg flex gap-2"

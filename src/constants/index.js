@@ -1,58 +1,44 @@
 import podpunklogo from "../assets/projects/PodPunk/podpunk-logo.png";
 import podpunkhero from "../assets/projects/PodPunk/podpunk-hero.png";
 import podpunkmockup from "../assets/projects/PodPunk/podpunk-mockup.png";
-import podpunklanding from "../assets/projects/PodPunk/podpunk-landing.png";
-import podpunkproducts from "../assets/projects/PodPunk/podpunk-products.png";
-import podpunkpdetail from "../assets/projects/PodPunk/podpunk-pdetail.png";
+import podpunk_display from "../assets/projects/PodPunk/podpunk-display.png";
 import podpunktypograph from "../assets/projects/PodPunk/podpunk-typograph.png";
 
 import menjiwa_logo from "../assets/projects/Menjiwa/menjiwa-logo.png";
 import menjiwa_thumb from "../assets/projects/Menjiwa/menjiwa-thumbnail.png";
 import menjiwa_mockup from "../assets/projects/Menjiwa/menjiwa-mockup.png";
-import menjiwa_disp1 from "../assets/projects/Menjiwa/menjiwa-disp1.png";
-import menjiwa_disp2 from "../assets/projects/Menjiwa/menjiwa-disp2.png";
-import menjiwa_disp3 from "../assets/projects/Menjiwa/menjiwa-disp3.png";
+import menjiwa_display from "../assets/projects/Menjiwa/menjiwa-display.png";
 import menjiwa_typograph from "../assets/projects/Menjiwa/menjiwa-typograph.png";
 
 import atheene_logo from "../assets/projects/Atheene/atheene-logo.png";
 import atheene_thumb from "../assets/projects/Atheene/atheene-thumbnail.png";
 import atheene_mockup from "../assets/projects/Atheene/atheene-mockup.png";
-import atheene_disp1 from "../assets/projects/Atheene/atheene-disp1.png";
-import atheene_disp2 from "../assets/projects/Atheene/atheene-disp2.png";
-import atheene_disp3 from "../assets/projects/Atheene/atheene-disp3.png";
+import atheene_display from "../assets/projects/Atheene/atheene-display.png";
 import atheene_typograph from "../assets/projects/Atheene/atheene-typograph.png";
 
 import uty_logo from "../assets/projects/uty/uty-logo.png";
 import uty_thumb from "../assets/projects/uty/uty-thumbnail.png";
 import uty_mockup from "../assets/projects/uty/uty-mockup.png";
-import uty_disp1 from "../assets/projects/uty/uty-disp1.png";
-import uty_disp2 from "../assets/projects/uty/uty-disp2.png";
-import uty_disp3 from "../assets/projects/uty/uty-disp3.png";
+import uty_display from "../assets/projects/uty/uty-display.png";
 import uty_typograph from "../assets/projects/uty/uty-typograph.png";
 
 import msc_logo from "../assets/projects/msc/msc-logo.png";
 import msc_thumb from "../assets/projects/msc/msc-thumbnail.png";
 import msc_mockup from "../assets/projects/msc/msc-mockup.png";
-import msc_disp1 from "../assets/projects/msc/msc-disp1.png";
-import msc_disp2 from "../assets/projects/msc/msc-disp2.png";
-import msc_disp3 from "../assets/projects/msc/msc-disp3.png";
+import msc_display from "../assets/projects/msc/msc-display.png";
 import msc_typograph from "../assets/projects/msc/msc-typograph.png";
 
 
 import immun_logo from "../assets/projects/immun/immun-logo.png";
 import immun_thumb from "../assets/projects/immun/immun-thumbnail.png";
 import immun_mockup from "../assets/projects/immun/immun-mockup.png";
-import immun_disp1 from "../assets/projects/immun/immun-disp1.png";
-import immun_disp2 from "../assets/projects/immun/immun-disp2.png";
-import immun_disp3 from "../assets/projects/immun/immun-disp3.png";
+import immun_display from "../assets/projects/immun/immunization-display.png";
 import immun_typograph from "../assets/projects/immun/immun-typograph.png";
 
 import workshop_logo from "../assets/projects/workshop/workshop-logo.png";
 import workshop_thumb from "../assets/projects/workshop/workshop-thumbnail.png";
 import workshop_mockup from "../assets/projects/workshop/workshop-mockup.png";
-import workshop_disp1 from "../assets/projects/workshop/workshop-disp1.png";
-import workshop_disp2 from "../assets/projects/workshop/workshop-disp2.png";
-import workshop_disp3 from "../assets/projects/workshop/workshop-disp3.png";
+import workshop_display from "../assets/projects/workshop/workshop-display.png";
 import workshop_typograph from "../assets/projects/workshop/workshop-typograph.png";
 
 
@@ -258,9 +244,7 @@ export const PROJECTS = [
         image: podpunklogo,
         thumbnail: podpunkhero,
         mockup: podpunkmockup,
-        disp1: podpunklanding,
-        disp2: podpunkpdetail,
-        disp3: podpunkproducts,
+        display: podpunk_display,
         typograph: podpunktypograph,
         year:"2024",
         link:"https://medium.com/@gathanafrr/podpunk-co-ui-ux-design-db909c4a3922",
@@ -275,9 +259,7 @@ export const PROJECTS = [
         image: menjiwa_logo,
         thumbnail: menjiwa_thumb,
         mockup: menjiwa_mockup,
-        disp1: menjiwa_disp1,
-        disp2: menjiwa_disp2,
-        disp3: menjiwa_disp3,
+        display: menjiwa_display,
         typograph: menjiwa_typograph,
         year:"2024",
         link:"https://medium.com/@gathanafrr/menjiwa-barbershop-ui-ux-desgin-3335c3bebf18",
@@ -292,9 +274,7 @@ export const PROJECTS = [
         image: atheene_logo,
         thumbnail: atheene_thumb,
         mockup: atheene_mockup,
-        disp1: atheene_disp1,
-        disp2: atheene_disp2,
-        disp3: atheene_disp3,
+        display: atheene_display,
         typograph: atheene_typograph,
         year:"2024",
         link:"https://medium.com/@gathanafrr/ath%C3%A9ene-resto-ui-ux-design-ac55afad9ecc",
@@ -309,9 +289,7 @@ export const PROJECTS = [
         image: uty_logo,
         thumbnail: uty_thumb,
         mockup: uty_mockup,
-        disp1: uty_disp1,
-        disp2: uty_disp2,
-        disp3: uty_disp3,
+        display: uty_display,
         typograph: uty_typograph,
         year:"2023",
         link:"https://medium.com/@gathanafrr/re-design-uty-official-website-5286db4b1821",
@@ -331,9 +309,7 @@ export const PROJECTS = [
         image: msc_logo,
         thumbnail: msc_thumb,
         mockup: msc_mockup,
-        disp1: msc_disp1,
-        disp2: msc_disp2,
-        disp3: msc_disp3,
+        display:msc_display,
         typograph: msc_typograph,
         year:"2023",
         link:"https://github.com/gathanandhika/MSC-Application",
@@ -348,9 +324,7 @@ export const PROJECTS = [
         image: immun_logo,
         thumbnail: immun_thumb,
         mockup: immun_mockup,
-        disp1: immun_disp1,
-        disp2: immun_disp2,
-        disp3: immun_disp3,
+        display: immun_display,
         typograph: immun_typograph,
         year:"2023",
         link:"https://github.com/gathanandhika/Immunization-Application",
@@ -365,9 +339,7 @@ export const PROJECTS = [
         image: workshop_logo,
         thumbnail: workshop_thumb,
         mockup: workshop_mockup,
-        disp1: workshop_disp1,
-        disp2: workshop_disp2,
-        disp3: workshop_disp3,
+        display:workshop_display,
         typograph: workshop_typograph,
         year:"2023",
         link:"https://github.com/gathanandhika/Workshop-Service-Aplication",

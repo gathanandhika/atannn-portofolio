@@ -24,36 +24,27 @@ const Hero = () => {
             {/* Parallax Kontainer Teks */}
             <div className="absolute top-0 z-[-2] text-center w-full px-4">
                 <div data-scroll data-scroll-speed="-1">
-                    <motion.p
-                    whileInView={{ opacity:1, y: 0 }}
-                    initial={{ opacity:0, y:-100 }}
-                    transition={{ duration: 0.5, type:"spring", stiffness:120}}
-                        className="lg:pb-0 pb-8 text-[50px] text-transparent tracking-tight lg:text-[175px] lg:text-zinc-950 text-start lg:text-center lg:mb-[-50px] mt-[-20px]"
+                    <p
+                        className="lg:pb-0 pb-8 text-[50px] text-transparent tracking-tight lg:text-[175px] lg:text-zinc-950 text-start lg:text-center mt-[-20px]"
                     >
                         GATHAN ANDHIKA
-                    </motion.p>
+                    </p>
                 </div>
 
                 <div data-scroll data-scroll-speed="-2">
-                    <motion.span
-                    whileInView={{ opacity:1, y: 0 }}
-                    initial={{ opacity:0, y:-100 }}
-                    transition={{ duration: 0.5, type:"spring", stiffness:120}}
+                    <span
                         className="lg:text-2xl text-lg lg:text-end block text-start mb-[0px] lg:mb-[0px] text-transparent lg:text-zinc-950"
                     >
                         Developer &mdash; Designer
-                    </motion.span>
+                    </span>
                 </div>
 
                 <div data-scroll data-scroll-speed="-4">
-                    <motion.span
-                    whileInView={{ opacity:1, y: 0 }}
-                    initial={{ opacity:0, y:-100 }}
-                    transition={{ duration: 0.5, type:"spring", stiffness:120}}
+                    <span
                         className="lg:text-5xl font-thin text-lg lg:text-start block text-start mb-[0px] lg:mb-[0px]"
                     >
                         <FiArrowDownRight />
-                    </motion.span>
+                    </span>
                 </div>
             </div>
         </div>

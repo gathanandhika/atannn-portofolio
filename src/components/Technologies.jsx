@@ -23,7 +23,7 @@ const iconVariants = (duration) => ({
 const Technologies = () => {
   return (
     <div 
-    data-scroll-section
+   data-scroll-section
     className="pb-24">
         <div className="flex flex-wrap items-center justify-center gap-4 mt-28">
             <motion.div
