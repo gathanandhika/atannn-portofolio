@@ -31,7 +31,7 @@ const TitleUpdater = () => {
     // Ganti title sesuai dengan rute yang sedang aktif
     switch (location.pathname) {
       case '/':
-        document.title = "Gathan Andhika";
+        document.title = "Atannn";
         break;
       case '/projects/:title':
         document.title = 'Work - Atannn';

@@ -1,11 +1,25 @@
 // Hero.jsx (Updated)
-import { HERO_CONTENT } from "../constants";
+
+import { useEffect, useState } from "react";
 import profilPic from "../assets/nnathProfil.png";
-import { motion } from "framer-motion";
-import { Parallax } from "react-scroll-parallax";
+
 import { FiArrowDownRight } from "react-icons/fi";
 
 const Hero = () => {
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+  // Handle image loading
+  useEffect(() => {
+    const img = new Image();
+    img.src = profilPic;
+    img.onload = () => {
+      setImageLoaded(true);
+      // Refresh locomotive scroll after image loads
+      if (window.locomotiveScroll) {
+        window.locomotiveScroll.update();
+      }
+    };
+  }, []);
     return (
         <div 
         className="pb-4 lg:mb-24 text-zinc-950 relative h-screen flex flex-col items-center justify-center overflow-hidden" data-scroll-section>

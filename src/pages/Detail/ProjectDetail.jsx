@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import PDetailHero from "../../components/ProjectDetailPage/PDetailHero";
@@ -8,11 +9,21 @@ import { useResetScroll } from "../../hooks/useResetScroll";
 
 const ProjectDetail = () => {
   useResetScroll();
+
+  // Reset locomotive scroll when component unmounts
+  useEffect(() => {
+    return () => {
+      if (window.locomotiveScroll) {
+        window.locomotiveScrol.destroy();
+      }
+    };
+  }, []);
+
   return (
     <div className="project-detail">
       <Navbar/>
       <div className="px-2 lg:px-28">
-      <PDetailHero/>
+        <PDetailHero/>
       </div>
       <PDetailMockup/>
       <PDetailDisplay/>
