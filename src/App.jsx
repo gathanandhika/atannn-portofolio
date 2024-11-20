@@ -81,7 +81,7 @@ const AppContent = () => {
   return (
       <div data-scroll-container className='overflow-x-hidden text-zinc-900 antialiased selection:bg-indigo-600 selection:text-white'>
         <PageTransition />
-        <div className="container mx-auto">
+        <div className="mx-auto">
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/projects/:title' element={<ProjectDetail />} />

@@ -39,7 +39,7 @@ const Hero = () => {
             <div className="absolute top-0 z-[-2] text-center w-full px-4">
                 <div data-scroll data-scroll-speed="-1">
                     <p
-                        className="lg:pb-0 pb-8 text-[50px] text-transparent tracking-tight lg:text-[175px] lg:text-zinc-950 text-start lg:text-center mt-[-20px]"
+                        className="lg:pb-0 pb-8 text-[20px] text-transparent tracking-tight lg:text-[175px] lg:text-zinc-950 text-start lg:text-center mt-[-20px]"
                     >
                         GATHAN ANDHIKA
                     </p>
@@ -47,7 +47,7 @@ const Hero = () => {
 
                 <div data-scroll data-scroll-speed="-2">
                     <span
-                        className="lg:text-2xl text-lg lg:text-end block text-start mb-[0px] lg:mb-[0px] text-transparent lg:text-zinc-950"
+                        className="lg:text-2xl text-lg lg:text-end block text-start mb-[0px] lg:mt-[50px] text-transparent lg:text-zinc-950 lg:mr-32"
                     >
                         Developer &mdash; Designer
                     </span>
@@ -55,7 +55,7 @@ const Hero = () => {
 
                 <div data-scroll data-scroll-speed="-4">
                     <span
-                        className="lg:text-5xl font-thin text-lg lg:text-start block text-start mb-[0px] lg:mb-[0px]"
+                        className="lg:text-5xl font-thin text-lg lg:text-start block text-start mb-[0px] lg:mb-[0px] lg:ml-32"
                     >
                         <FiArrowDownRight />
                     </span>

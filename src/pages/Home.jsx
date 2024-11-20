@@ -15,8 +15,9 @@ const Home = () => {
     <div >
       <div className="relative top-0 z-[-2] h-full w-full left-0" />
         <Navbar />
-      <div className=" relative px-8 lg:px-24 lg:pb-32" >
         <Hero />
+
+      <div className=" relative px-8 lg:px-24 lg:pb-32" >
         <About />
         <Technologies />
         <Experience />     

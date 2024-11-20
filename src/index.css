@@ -141,3 +141,14 @@ html.has-scroll-dragging {
   overflow: hidden; /* Hapus scrollbar default */
 }
 
+
+section{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  overflow: hidden;
+}
