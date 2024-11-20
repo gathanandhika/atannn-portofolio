@@ -32,9 +32,9 @@ const ContactMe = () => {
             // Show success toast if form submission is successful
             toast.success("Email sent successfully!", {
                 position: "top-right",
-                autoClose: 5000,
+                autoClose: 20000,
                 hideProgressBar: false,
-                closeOnClick: false,
+                closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
@@ -49,6 +49,7 @@ const ContactMe = () => {
             });
 
             event.target.reset();
+            
 
             console.log("Success", res);
 
@@ -57,9 +58,9 @@ const ContactMe = () => {
             // Show error toast if there is a failure
             toast.error("Oops! Something went wrong. Please try again.", {
                 position: "top-right",
-                autoClose: 5000,
+                autoClose: 20000,
                 hideProgressBar: false,
-                closeOnClick: false,
+                closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
@@ -92,6 +93,7 @@ const ContactMe = () => {
                             {/* Input fields */}
                             <div className="relative z-0 w-full mb-12 group">
                                 <input
+                                    autoComplete="off"
                                     type="text"
                                     name="name"
                                     id="name"
@@ -110,6 +112,7 @@ const ContactMe = () => {
                             {/* More input fields... */}
                             <div className="relative z-0 w-full mb-12 group">
                                 <input
+                                    autoComplete="off"
                                     type="email"
                                     name="email"
                                     id="email"
@@ -128,6 +131,7 @@ const ContactMe = () => {
                             {/* Service field */}
                             <div className="relative z-0 w-full mb-12 group">
                                 <input
+                                    autoComplete="off"
                                     type="text"
                                     name="service"
                                     id="service"

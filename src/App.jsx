@@ -26,6 +26,16 @@ import ScrollToTop from './components/ScrollToTop';
 // Component untuk mengatur title halaman berdasarkan rute
 const TitleUpdater = () => {
   const location = useLocation();
+
+  useEffect(() => {
+    console.log('LocomotiveScroll initialized:', window.locomotiveScroll);
+  }, []);
+  
+  useEffect(() => {
+    if (window.locomotiveScroll) {
+      window.locomotiveScroll.update();
+    }
+  }, [location]); 
   
   useEffect(() => {
     // Ganti title sesuai dengan rute yang sedang aktif
@@ -76,6 +86,7 @@ const TitleUpdater = () => {
   
   return null;
 };
+
 
 const AppContent = () => {
   return (
