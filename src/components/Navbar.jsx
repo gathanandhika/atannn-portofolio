@@ -1,7 +1,7 @@
 import { PiCopyrightLight } from "react-icons/pi";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-
+import CustomLink from "./CustomLink";
 
 const Navbar = () => {
   const location = useLocation();
@@ -32,9 +32,9 @@ const Navbar = () => {
           <PiCopyrightLight />
         </div>
         <div>
-          <Link to="/">
+          <CustomLink to="/">
             Made with Love &mdash; Atannn.
-          </Link>
+          </CustomLink>
         </div>
       </motion.div>
 
@@ -51,9 +51,9 @@ const Navbar = () => {
             isActive("/about") ? "border-b border-black" : ""
           }`} // Aktifkan animasi saat halaman aktif
         >
-          <Link to="/about" className="custom-link">
+          <CustomLink to="/about" className="custom-link">
             About
-          </Link>
+          </CustomLink>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1, y: 2.5 }}
@@ -64,9 +64,9 @@ const Navbar = () => {
               : ""
           }`}
         >
-          <Link to="/work" className="custom-link">
+          <CustomLink to="/work" className="custom-link">
             Work
-          </Link>
+          </CustomLink>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1, y: 2.5 }}
@@ -83,9 +83,9 @@ const Navbar = () => {
               : ""
           }`}
         >
-          <Link to="/career" className="custom-link">
+          <CustomLink to="/career" className="custom-link">
             Career
-          </Link>
+          </CustomLink>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1, y: 2.5 }}
@@ -94,9 +94,9 @@ const Navbar = () => {
             isActive("/contact") ? "border-b border-white" : ""
           }`}
         >
-          <Link to="/contact" className="custom-link">
+          <CustomLink to="/contact" className="custom-link">
             Contact
-          </Link>
+          </CustomLink>
         </motion.div>
       </div>
     </nav>

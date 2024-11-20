@@ -2,7 +2,6 @@ import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
 import CustomLink from "./CustomLink";
 import Button from "./Button/Button";
-import { Link } from "react-router-dom";
 
 const Experience = () => {
   // Menggunakan flatMap untuk meratakan semua experiences dari setiap kategori
@@ -20,7 +19,7 @@ const Experience = () => {
       </h1>
       <div>
         {experiencesToShow.map((experience) => (
-          <Link
+          <CustomLink
             to={`/experience/${experience.company}`} // Misalnya menggunakan company sebagai ID
             key={experience.company}
             className="project-card0 mb-4 flex flex-wrap lg:justify-center lg:py-8 px-8"
@@ -42,14 +41,14 @@ const Experience = () => {
                 </p>
               </div>
             </motion.div>
-          </Link>
+          </CustomLink>
         ))}
       </div>
       <div className="flex justify-center items-center">
       <div className="lg:w-56 w-52 flex justify-center items-center">
-          <Link to="/career">
+          <CustomLink to="/career">
             <Button>More Experience</Button>
-          </Link>
+          </CustomLink>
         </div>
       </div>
 
