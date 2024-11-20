@@ -1,6 +1,5 @@
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
-import CustomLink from "./CustomLink";
 import Button from "./Button/Button";
 
 
@@ -19,7 +18,7 @@ const Projects = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {experiencesToShow.map((project) => (
-          <CustomLink to={`/projects/${project.title}`} key={project.id} className="project-card">
+          <Link to={`/projects/${project.title}`} key={project.id} className="project-card">
             <motion.div 
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -50 }}
@@ -39,14 +38,14 @@ const Projects = () => {
               <h3 className="lg:text-xl text-base mt-2">{project.title}</h3>
               <p className="lg:text-sm text-xs text-zinc-500">{project.description}</p>
             </motion.div>
-          </CustomLink>
+          </Link>
         ))}
       </div>
       <div className="flex justify-center items-center mt-20">
       <div className="lg:w-56 w-52 flex justify-center items-center">
-        <CustomLink to="/work">
+        <Link to="/work">
           <Button>More Work</Button>
-        </CustomLink>
+        </Link>
       </div>
     </div>
     </div>

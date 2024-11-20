@@ -19,7 +19,7 @@ const Experience = () => {
       </h1>
       <div>
         {experiencesToShow.map((experience) => (
-          <CustomLink
+          <Link
             to={`/experience/${experience.company}`} // Misalnya menggunakan company sebagai ID
             key={experience.company}
             className="project-card0 mb-4 flex flex-wrap lg:justify-center lg:py-8 px-8"
@@ -41,14 +41,14 @@ const Experience = () => {
                 </p>
               </div>
             </motion.div>
-          </CustomLink>
+          </Link>
         ))}
       </div>
       <div className="flex justify-center items-center">
       <div className="lg:w-56 w-52 flex justify-center items-center">
-          <CustomLink to="/career">
+          <Link to="/career">
             <Button>More Experience</Button>
-          </CustomLink>
+          </Link>
         </div>
       </div>
 
