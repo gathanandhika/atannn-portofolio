@@ -2,6 +2,7 @@ import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
 import CustomLink from "./CustomLink";
 import Button from "./Button/Button";
+import { Link } from "react-router-dom";
 
 const Experience = () => {
   // Menggunakan flatMap untuk meratakan semua experiences dari setiap kategori
